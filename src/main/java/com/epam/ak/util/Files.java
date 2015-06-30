@@ -1,4 +1,4 @@
-package util;
+package com.epam.ak.util;
 
 import java.io.*;
 

@@ -1,15 +1,15 @@
-import logic.Parser;
+package com.epam.ak;
+
+import com.epam.ak.parser.Parser;
+import com.epam.ak.util.Files;
+import com.epam.ak.util.PropertyManager;
 import org.slf4j.Logger;
-import util.Files;
-import util.PropertyManager;
 
 public class Runner {
     public static void main(String[] args) {
         Logger logger = org.slf4j.LoggerFactory.getLogger(Runner.class);
         String textString = Files.getText();
         PropertyManager propertyManager = new PropertyManager("components.properties");
-        logger.info(String.valueOf(propertyManager.stringPropertyNames()));
-
 
         Parser parser = new Parser();
         parser.configure(propertyManager);
